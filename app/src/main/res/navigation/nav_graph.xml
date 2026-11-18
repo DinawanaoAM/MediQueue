@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/landingFragment">
+
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.example.mediqueue.ui.LandingFragment"
+        android:label="Landing"
+        tools:layout="@layout/fragment_landing">
+        <action
+            android:id="@+id/action_landingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_landingFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mediqueue.ui.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_patientDashboard"
+            app:destination="@id/patientDashboardFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminDashboard"
+            app:destination="@id/adminDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mediqueue.ui.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_patientDashboard"
+            app:destination="@id/patientDashboardFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/patientDashboardFragment"
+        android:name="com.example.mediqueue.ui.PatientDashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_patient_dashboard">
+        <action
+            android:id="@+id/action_patientDashboard_to_bookAppointment"
+            app:destination="@id/bookAppointmentFragment" />
+        <action
+            android:id="@+id/action_patientDashboard_to_history"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_patientDashboard_to_qrConfirmation"
+            app:destination="@id/qrConfirmationFragment" />
+        <action
+            android:id="@+id/action_patientDashboard_to_profile"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookAppointmentFragment"
+        android:name="com.example.mediqueue.ui.BookAppointmentFragment"
+        android:label="Book Appointment"
+        tools:layout="@layout/fragment_book_appointment">
+        <action
+            android:id="@+id/action_bookAppointment_to_qrConfirmation"
+            app:destination="@id/qrConfirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrConfirmationFragment"
+        android:name="com.example.mediqueue.ui.QrConfirmationFragment"
+        android:label="Confirmation"
+        tools:layout="@layout/fragment_qr_confirmation">
+        <action
+            android:id="@+id/action_qrConfirmation_to_queueTracker"
+            app:destination="@id/queueTrackerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/queueTrackerFragment"
+        android:name="com.example.mediqueue.ui.QueueTrackerFragment"
+        android:label="Queue Status"
+        tools:layout="@layout/fragment_queue_tracker" />
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.mediqueue.ui.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.mediqueue.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/adminDashboardFragment"
+        android:name="com.example.mediqueue.ui.AdminDashboardFragment"
+        android:label="Admin Dashboard"
+        tools:layout="@layout/fragment_admin_dashboard">
+        <action
+            android:id="@+id/action_adminDashboard_to_announcements"
+            app:destination="@id/manageAnnouncementsFragment" />
+        <action
+            android:id="@+id/action_adminDashboard_to_userManagement"
+            app:destination="@id/userManagementFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageAnnouncementsFragment"
+        android:name="com.example.mediqueue.ui.ManageAnnouncementsFragment"
+        android:label="Manage Announcements"
+        tools:layout="@layout/fragment_manage_announcements" />
+
+    <fragment
+        android:id="@+id/userManagementFragment"
+        android:name="com.example.mediqueue.ui.UserManagementFragment"
+        android:label="User Management"
+        tools:layout="@layout/fragment_user_management" />
+
+</navigation>

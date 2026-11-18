@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MediQueue" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="android:windowBackground">@color/background_minimal</item>
+        <item name="android:statusBarColor">@color/background_minimal</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Typography -->
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Theme.MediQueue" parent="Base.Theme.MediQueue" />
+
+    <style name="MediQueue.Button" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.MediQueue.Button</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="MediQueue.Button.Secondary" parent="MediQueue.Button">
+        <item name="backgroundTint">@color/background_minimal</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="MediQueue.Button.Accent" parent="MediQueue.Button">
+        <item name="backgroundTint">@color/accent_cherry</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ShapeAppearance.MediQueue.Button" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <style name="MediQueue.TextView.Heading" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:fontFamily">serif</item> <!-- Using serif as fallback for Playfair -->
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MediQueue.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/white</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+</resources>

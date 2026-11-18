@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_minimal">#EFEDE6</color>
+    <color name="accent_cherry">#CD0000</color>
+    <color name="neutral_light">#F5F5F5</color>
+    <color name="neutral_medium">#E0E0E0</color>
+    <color name="neutral_dark">#2C2C2C</color>
+
+    <!-- Aliases for backward compatibility -->
+    <color name="cream">#EFEDE6</color>
+    <color name="accent">#CD0000</color>
+
+    <color name="primary">#2C2C2C</color>
+    <color name="primary_variant">#000000</color>
+    <color name="secondary">#EFEDE6</color>
+</resources>
